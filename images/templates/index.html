@@ -1,0 +1,35 @@
+{% extends 'base.html'%}
+
+
+{%  block content%}
+{{block.super}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+  
+    <div class="container-fluid">
+        <!-- <h4 style="color: royalblue;">Captured</h4> -->
+        <br>
+        <br>
+        <div class="gallery">
+            {% for image in images %}
+            <div class="gallery-item">
+            <!-- <div class="card"> -->
+                <img src="{{image.image.url}}" class="img-responsive" data-bs-toggle="modal" data-bs-target="#modal{{image.id}}" alt="">
+               
+              <!-- </div> -->
+          
+              </div>
+            {% include 'modal.html'%}
+            {% endfor %}
+        </div>
+      </div>
+</body>
+</html>
+{% endblock %}
