@@ -1,0 +1,32 @@
+{%extends 'base.html'%} 
+{% block content %}
+<br>
+<br>
+<div class="container">
+
+  <div class="row">
+    {% if images%}
+      <h2 style="color: royalblue;">{{message}}</h2>
+    {% else %}
+      <h2> Found 0 images for the search term {{message}}</h2>
+    {% endif %}
+
+  </div>
+
+  <div class="gallery">
+
+    {% for image in images %}
+    <div class="gallery-item">
+    <!-- <div class="card" style="width: 18rem;"> -->
+        <img src="{{image.image.url}}" class="img-responsive" data-bs-toggle="modal" data-bs-target="#modal{{image.id}}" alt="">
+        <!-- <div class="card-body">
+          <h5 class="card-title">{{image.image_description}} </h5>
+        </div> -->
+      <!-- </div> -->
+    <br>
+      </div>
+      {% include 'modal.html'%}
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
