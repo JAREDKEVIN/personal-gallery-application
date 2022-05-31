@@ -64,4 +64,4 @@ class ImagesTestClass(TestCase):
     def test_search_method(self):
         image_category = 'car'
         searched = self.image.search_by_category(image_category)
-        self.assertTrue(len(searched)>=0)   
+        self.assertTrue(len(searched)>=0)                 

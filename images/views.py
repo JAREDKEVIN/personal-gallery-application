@@ -22,4 +22,4 @@ def search_results(request):
 
     else:
         message = "You have not searched for any term"
-        return render(request,'search.html',{"message":message})  
+        return render(request,'search.html',{"message":message})    
