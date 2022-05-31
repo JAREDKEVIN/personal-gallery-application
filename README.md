@@ -5,8 +5,6 @@
 > A user can also search for the photos.
 
 
-## Author
-
 👤 **Author**
 - KIPKEMOI JARED KEVIN
 
@@ -83,3 +81,4 @@ This project is [MIT](LICENSE.md) licensed.
 
 
 Copyright &copy; 2022 (Kipkemoi Jared Kevin)
+
